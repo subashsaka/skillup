@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .description {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25PX;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .images img {
+            max-width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f9f9f9, #dcdcdc);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #020202;
+        }
+
+        footer {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #182848, #4b6cb7);
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            bottom: 0;
+            width: 100%;
+        }
+        header{
+    justify-content: space-between;
+    display:flex;
+    text-decoration: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color:rgb(58, 209, 229);
+    border-radius: 2px;
+    background:rgba(213, 201, 201, 0.7);
+    backdrop-filter: blur(7px);
+}
+.compney{
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#0f0f0f;
+    align-self: center;
+    margin-left: 180px;
+}
+.compneyname{
+    margin-top: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.headimage{
+    width: 150px;
+    height: 50px;
+    border: 3px solid rgb(43, 199, 193);
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.compneyname a{ 
+    text-decoration: none;
+    list-style: none;
+    padding: 0px 10px;
+    font-size: 18px;
+    color: black;
+    margin-top: 50px;
+}
+.compneyname :hover{
+    color:#FF407D
+}
+.loginbutton:hover{
+background-color: rgb(224, 78, 45);
+color: white;
+}
+.loginbutton{
+    border-radius:  6px;
+    height: 23px;
+    width: 80px;
+}
+        img{
+            width: 280px;
+            height: 350px;
+        }
+        .pops{
+            font-size: 25px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to right, red , blue);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+        }
+        span{
+            padding: 3px;
+            font-weight: bold;
+            color: aqua;
+            background-color: rgb(84, 82, 82);
+            border-radius: 6PX;
+            border:2PX solid aqua;
+        }
+        @media only screen and (max-width: 768px){
+            .images p{
+                text-align: center;
+            }
+            .nokia{
+                height: auto;
+            }
+    
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#"><img class="headimage" src="./logo.png"></a>
+            <nav>
+            <div class="compneyname">
+            <a href="./index.html">Home</a>
+            <a href="./gpt.html">About</a>
+            <a href="./courses.html">Courses</a>
+            <a href="./roadmaps.html">Roadmaps</a>
+            <a class="loginbutton" href="./login.html">Login</a>
+            </div>
+        </nav>
+        </header>
+        <h1>About Us</h1>
+    
+    <main>
+        <section class="content">
+            <div class="description">
+                <p>Welcome to <span>SKILLUP</span><br> We are dedicated to providing the best sources for students to learn any skills or programming languages.</p>
+                <p>Whether you're a beginner or an advanced learner, we strive to offer comprehensive resources to help you on your learning journey.</p>
+            </div>
+            <div class="images">
+                <img class="nokia" src="./subash.jpg" alt="Image 1"><p class="pops">I HOPE THIS WEBSITE HELP YOU GUYS!!!!</p>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, #f9d423, #e65c00);">
+                <h2>Our Mission</h2>
+                <p>Our mission is to empower students with the knowledge and skills they need to succeed in today's fast-paced world.</p>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, #8e2de2, #4a00e0);">
+                <h2>Our Vision</h2>
+                <p>We envision a future where every student has access to quality educational resources regardless of their background or location.</p>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, #00c6fb, #005bea);">
+                <h2>Why Choose Us?</h2>
+                <p>With a team of dedicated educators and industry professionals, we curate the best learning materials to ensure that you get the most out of your learning experience.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SKILLUP. All rights reserved.</p>
+    </footer>
+</body>
+</html>
