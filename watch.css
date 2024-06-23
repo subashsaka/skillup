@@ -181,6 +181,9 @@ hr{
         flex-direction: column;
         align-items: center;
     }
+    .compneyname a{
+        padding: 5px;
+    }
     .compneyname{
         display: inline;
     }

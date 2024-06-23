@@ -296,6 +296,9 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
         display: inline;
         font-size: 15px;
     }
+    .compneyname a{
+        padding: 5px;
+    }
     .explore{
         margin-left: 0px;
     }

@@ -194,6 +194,9 @@ ul a:hover{
         flex-direction: column;
         align-items: center;
     }
+    .compneyname a{
+        padding: 5px;
+    }
     .car{
         height: 350px;
         width: 330px;
