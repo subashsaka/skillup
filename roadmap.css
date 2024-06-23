@@ -162,6 +162,11 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
         .compneyname{
             display: inline;
         }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .card{
             display: flex;
             flex-direction: column;

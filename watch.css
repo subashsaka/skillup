@@ -176,6 +176,11 @@ hr{
     header img{
         width: 110px;
     }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .compneyname{
         display: inline;
     }
