@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SKILLUP</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <link rel="STYLESHEET" href="main.css">
     <script src="roadmap.js"></script>
@@ -21,21 +22,21 @@
             </div>
         </nav>
         </header>
-        <h1 class="head">CHOOSE YOUR CARRIER AND START YOUR PROJECT..</h1>
+        <h1 class="head" >CHOOSE YOUR CARRIER AND START YOUR PROJECT..</h1>
         <div class="sec1">
         <div>
-            <img class="mainimg" src="./home3.jpg">
+            <img class="mainimg" src="./home3.jpg"data-aos="fade-up-right" data-aos-duration="40000">
         </div>
         <div class="rose">
-            <h1 class="discription">
+            <h1 class="discription" data-aos="fade-up-left" data-aos-duration="40000">
                 BUILD YOUR FUTURE <BR>
                 START YOUR <span>JOURNEY..</span>
             </h1>
-            <a href="./watch.html"><button class="explore">start now</button></a>
+            <a href="./watch.html"><button class="explore" data-aos="fade-up" data-aos-duration="40000">start now</button></a>
         </div>
     </div>
         <div class="sec2">
-    <div class="para">
+    <div class="para"  data-aos="fade-right" data-aos-duration="40000">
         <p> Want a best source to learn, Confused where to start ?<br>
         Want to Level up your skills, Don't know what to do ?
         <br><span>Unsure From Where To Begin ?</span>
@@ -43,17 +44,22 @@
         <button class="explore">Explore all</button>
     </div>
     <div>
-        <img src="./desktop.jpg" class="desktopimg">
+        <img src="./desktop.jpg" class="desktopimg" data-aos="fade-left" data-aos-duration="4000">
     </div>
         </div>
+        <div class="jocker">
+            <marquee id="marq" class="marq" scrollamount="13">
+                <h1 class="marqhead"> "WITH GREAT SKILLS COMES GREAT RESPONSIBILITY"</h1>
+            </marquee>
+        </div>
         <div class="sec3">
-        <div class="works">
+        <div class="works" data-aos="fade-up" data-aos-duration="40000">
         <h1>How <span class="job">SKILLUP</span> works ?</h1>
         </div>
         <div class="paths">
     <div class="pathbox">
         <div>
-        <img class = "carrer" src="./carrer.svg">
+        <img class = "carrer" src="./carrer.svg" data-aos="fade-right" data-aos-duration="40000">
     </div>
     <div>
         <p class="pathname">1 - choose your carrer</p>
@@ -61,7 +67,7 @@
     </div>
     <div class="pathbox">
         <div>
-        <img class = "courses" src="./courses.svg">
+        <img class = "courses" src="./courses.svg" data-aos="fade-left" data-aos-duration="40000">
         </div>
         <div>
             <p class="pathname">2 - choose your skill</p>
@@ -69,7 +75,7 @@
     </div>
     <div class="pathbox">
     <div>
-        <img class = "projects" src="./projects.svg">
+        <img class = "projects" src="./projects.svg" data-aos="fade-right" data-aos-duration="40000">
     </div>
     <div>
         <p class="pathname">3 - complete your course</p>
@@ -77,7 +83,7 @@
 </div>
 <div class="pathbox">
     <div>
-        <img class = "achive"src="./achieve.svg">
+        <img class = "achive"src="./achieve.svg" data-aos="fade-left" data-aos-duration="40000">
     </div>
     <div>
         <p class="pathname">4 - achieve your goal!</p>
@@ -90,15 +96,15 @@
     <div class="sec4">
         <div class="card">
             <div class="heylook">
-            <img class="vidimg" src="./videoimage.jpg">
+            <img class="vidimg" src="./videoimage.jpg" >
             </div>
-            <p>Learn Through Videos.</p>
-            <a href="./watch.html"><button class="learn">WATCH</button></a>
+            <p data-aos="fade-right" data-aos-duration="40000">Learn Through Videos.</p>
+            <a href="./watch.html"><button class="learn"data-aos="fade-up" data-aos-duration="40000">WATCH</button></a>
         </div>
         <div class="card">
             <img class="vidimg" src= "https://plus.unsplash.com/premium_photo-1661720027875-4bb0a2c90f30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG9ubGluZSUyMGxlYXJuaW5nfGVufDB8fDB8fHww">
-            <p> Learn Through Websites.</p>
-            <a href="./courses.html"><button class="learn">VISIT</button></a>
+            <p data-aos="fade-left" data-aos-duration="40000"> Learn Through Websites.</p>
+            <a href="./courses.html"><button class="learn" data-aos="fade-down" data-aos-duration="40000">VISIT</button></a>
         </div>
     </div>
     <hr>
@@ -142,4 +148,8 @@
                     </div>
                     <p class="copy">Copyright © 2012 - 2024 SKILLUP®. All rights reserved.</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     </body>
