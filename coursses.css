@@ -23,9 +23,6 @@ header{
     width: 100%;
     z-index: 2;
 }
-.nix{
-   
-}
 .section2{
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
@@ -110,9 +107,6 @@ ul{
     transform: translateY(-10px);  /* Move the card 10px upwards */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  /* Increase shadow on hover */
 }
-
-
-
 .r:hover{
     transition: ;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -151,24 +145,39 @@ hr{
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    gap: 10px;
 }
-.fb{
-    height: 32px;
-    width: 30px;
-}
-.twi{
-    height: 31px;
-    width: 30px;
-}
-.insta{
-    height: 46px;
-    width: 43px;
-    margin-top: -4px;
-}
-.wp{
-    height: 30px;
-    width: 29px;
-}
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    } 
+    .fa:hover {
+        -ms-transform: scale(1.8); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.1); 
+        box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+        color: black;
+    }
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+        }
+        .fa-linkedin {
+        background: #007bb5;
+        color: white;
+        }
+        .fa-instagram {
+        background: #262a2d;
+        color: white;
+        }
+        .fa-twitter {
+        background: #008efa;
+        color: white;
+        }
 .follow{
     text-align: center;
     margin-top: 30px;
@@ -185,11 +194,14 @@ ul{
 ul a:hover{
     color: #378CE7;
 }
-.fb .insta .twi .wp {
-    aspect-ratio: 3/2;
-    object-fit: contain;
-    mix-blend-mode: color-burn;
-    
+footer{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+.footercol a{
+    text-decoration: none;
+    color: white;
 }
 @media only screen and (max-width: 768px) {
     .section2{

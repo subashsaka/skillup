@@ -55,7 +55,6 @@ header{
 .loginbutton:hover{
     color: #0f0f0f;
 background-color: #8688ee;
-padding: 2px
 }
 .loginbutton{
     border-radius:  6px;
@@ -218,13 +217,14 @@ span{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .heylook{
-    background-color: #8688ee;
+    background-color: #1f1e1e;
     padding: 20px;
     border-radius: 8px;
 }
-.heylook:hover {
-    transform: translateY(-10px);  /* Move the card 10px upwards */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  /* Increase shadow on hover */
+.heylook p{
+    color: white;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .comfort{
     margin-top: 0%;
@@ -260,23 +260,37 @@ ul a:hover{
     margin-top: 10px;
     color: #05192d;
 }
-.fb{
-    height: 32px;
-    width: 30px;
-}
-.twi{
-    height: 31px;
-    width: 30px;
-}
-.insta{
-    height: 46px;
-    width: 43px;
-    margin-top: -4px;
-}
-.wp{
-    height: 30px;
-    width: 29px;
-}
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    } 
+    .fa:hover {
+        -ms-transform: scale(1.8); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.1); 
+        box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+        color: black;
+    }
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+    }
+    .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    }
+    .fa-instagram {
+    background: #262a2d;
+    color: white;
+    }
+    .fa-twitter {
+    background: #008efa;
+    color: white;
+    }
 .follow{
     text-align: center;
     margin-top: 30px;
@@ -287,14 +301,14 @@ ul a:hover{
     padding-bottom: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.fb .insta .twi .wp {
-    aspect-ratio: 3/2;
-    object-fit: contain;
-    mix-blend-mode: color-burn;
-}
 .footercol a{
     text-decoration: none;
-    color:black;
+    color:rgb(221, 216, 216);
+}
+footer{
+    background-color: #333;
+    color: white;
+    padding: 20px;
 }
 *{
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
