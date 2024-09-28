@@ -6,71 +6,72 @@
     <title>SkillUp - Sign In/Sign Up</title>
     <style>
         /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #222;
-            color: #fff;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        .title {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .cards-container {
-            display: flex;
-        }
-        .card {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            margin: 0 10px;
-            width: 350px; /* Adjust the width as needed */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 400px; /* Adjust the height as needed */
-        }
-        .button {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #333;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: calc(100% - 22px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .forgot-password {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        .forgot-password:hover {
-            color: #fff;
-        }
-        .create-account-button {
-            margin-top: 10px;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+        color: #fff;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .cards-container {
+        display: flex;
+    }
+    .card {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin: 0 10px;
+        width: 350px; /* Adjust the width as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px; /* Adjust the height as needed */
+    }
+    .button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .button:hover {
+        background-color: #3ec5fa;
+        color: #000000;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .forgot-password {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .forgot-password:hover {
+        color: #fff;
+    }
+    .create-account-button {
+        margin-top: 10px;
+    }
         header{
     justify-content: space-between;
     display:flex;
@@ -107,7 +108,8 @@
 }
 
 .headimage{
-    height: 50px;
+    height: 40px;
+    width: 130px;
     border: 3px solid rgb(43, 199, 193);
     border-radius: 10px;
     margin-left: 5px;
@@ -131,7 +133,8 @@
         margin-top: 30px;
     }
     .title{
-        margin-top: 100px;
+        margin-top: 280px;
+        margin-bottom: auto;
     }
     .compneyname a{
         padding: 5px;
@@ -140,45 +143,46 @@
     </style>
 </head>
 <body>
-    <header>
-        <a href="#"><img class="headimage" src="./logo.png"></a>
-            <nav>
-            <div class="compneyname">
-            <a href="./index.html">Home</a>
-            <a href="./gpt.html">About</a>
-            <a href="./courses.html">Courses</a>
-            <a href="./watch.html">Explore</a>
-            </div>
-        </nav>
-        </header>
-    <div class="container">
-        <div class="title">SkillUp</div>
-        <div class="cards-container">
-            <!-- Sign In Card -->
-            <div class="card">
-                <h2>Sign In</h2>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <a href="#" class="forgot-password">Forgot Password?</a>
-                <br><br>
-                <button class="button">Submit</button>
-                <br><br>
-                <button class="button">Sign in with Google</button>
-                <br><br>
-                <button class="button">Sign in with GitHub</button>
-            </div>
-            <!-- Sign Up Card -->
-            <div class="card">
-                <h2>Sign Up</h2>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button class="create-account-button button">Create Account</button>
-                <br><br>
-                <button class="button">Sign up with Google</button>
-                <br><br>
-                <button class="button">Sign up with GitHub</button>
-            </div>
-        </div>
+<header>
+<a href="#"><img class="headimage" src="./logo.png"></a>
+    <nav>
+    <div class="compneyname">
+    <a href="./index.html">Home</a>
+    <a href="./gpt.html">About</a>
+    <a href="./courses.html">Courses</a>
+    <a href="./roadmaps.html">Roadmaps</a>
+    <a href="./watch.html">Explore</a>
     </div>
+</nav>
+</header>
+<div class="container">
+<div class="title">Login or Sign Up</div>
+<div class="cards-container">
+    <!-- Sign In Card -->
+    <div class="card">
+        <h2>Sign In</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <a href="#" class="forgot-password">Forgot Password?</a>
+        <br><br>
+        <button class="button">Submit</button>
+        <br><br>
+        <button class="button">Sign in with Google</button>
+        <br><br>
+        <button class="button">Sign in with GitHub</button>
+    </div>
+    <!-- Sign Up Card -->
+    <div class="card">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button class="create-account-button button">Create Account</button>
+        <br><br>
+        <button class="button">Sign up with Google</button>
+        <br><br>
+        <button class="button">Sign up with GitHub</button>
+    </div>
+</div>
+</div>
 </body>
 </html>
