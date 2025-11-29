@@ -1,89 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>learnbyread</title>
+    <title>Courses - SKILLUP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .course-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .course-card {
+            align-items: flex-start;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .course-meta i {
+            margin-right: 0.3rem;
+        }
+
+        .btn-sm {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .course-card:hover .btn-sm {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+    </style>
 </head>
-<link rel="STYLESHEET" href="coursses.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <body>
-    <div class="total">
     <header>
-    <img class="headimage" src="./logo.png">
+        <a href="./index.html" class="logo-link">
+            <div class="logo-container">
+                <i class="fa fa-rocket logo-icon"></i>
+                <span class="logo-text">SKILL<span class="logo-accent">UP</span></span>
+            </div>
+        </a>
         <nav>
-        <div class="compneyname">
-        <a href="./index.html">Home</a>
-        <a href="./gpt.html">About</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./roadmaps.html">Roadmaps</a>
-        <a class="loginbutton" href="/login.html">Login</a>
-        </div>
-    </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="companyname">
+                <a href="./index.html">Home</a>
+                <a href="./gpt.html">About</a>
+                <a href="./courses.html" class="active">Courses</a>
+                <a href="./roadmaps.html">Roadmaps</a>
+                <a href="./watch.html">Explore</a>
+                <a class="loginbutton" href="./login.html">Login</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fa fa-moon-o"></i></button>
+            </div>
+        </nav>
     </header>
-    <h1 class="top">WHAT YOU ARE UP TO!!!!</h1>
+
     <div class="section2">
-        <div class="main"><img class="car" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
-        <div><h1 class="select">START YOUR JOURNEY FROM <span>HERE</span> :)</h1></div>
+        <div class="main" data-aos="fade-right">
+            <img class="mainimg card-3d" src="./images/courses_hero_3d.png" alt="Courses Hero">
+        </div>
+        <div class="text-content" data-aos="fade-left">
+            <h1 class="select">EXPLORE OUR <span class="gradient-text">COURSES</span></h1>
+            <p class="para">Curated learning paths to help you master new skills. From basics to advanced concepts, we
+                have it all.</p>
+        </div>
     </div>
-    <h1 class="hlo">CHOOSE WHAT YOU WANT TO LEARN</h1>
-<div class="section1">
-<div class="container">
-    <div><a href="https://www.w3schools.com/r/default.asp"><button class="r">R PROGRAMMING</button></a></div>
-    <div><a href="https://developer.android.com/kotlin"><button class="r">KOTLIN</button></a></div>
-    <div><a href="https://www.w3schools.com/c/index.php"><button class="r">C PROGRAMMING</button></a></div>
-    <div><a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><button class="r">C#</button></a></div>
-    <div><a href="https://www.sqlzoo.net/wiki/SQL_Tutorial"><button class="r">SQL</button></a></div>
-    <div><a href="https://docs.python.org/3/"><button class="r">PYTHON</button></a></div>
-    <div><a href="https://javascript.info/"><button class="r">JAVA SCRIPT</button></a></div>
-    <div><a href="https://www.w3schools.com/html/default.asp"><button class="r">HTML</button></a></div>
-    <div><a href="https://www.w3schools.com/jquery/default.asp"><button class="r">J QUERY</button></a></div>
-    <div><a href="https://getbootstrap.com/"><button class="r">BOOTSTRAP</button></a></div>
-    <div><a href="https://cplusplus.com/"><button class="r">C++</button></a></div>
-    <div><a href="https://stackify.com/java-tutorials/"><button class="r">JAVA</button></a></div>
-    <div><a href="https://www.infoworld.com/article/2076396/xml-for-the-absolute-beginner.html"><button class="r">XML</button></a></div>
-    <div><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjN6Mbck_SEAxUyaEcBHdCcDIIYABABGgJxdQ&ase=2&gclid=Cj0KCQjwwMqvBhCtARIsAIXsZpbV73XiQ886JP0OwPuRxvo0WXVFWBXoqOs6jjgrXDnUV247L3fF88EaAsEVEALw_wcB&ohost=www.google.com&cid=CAESVeD2UpMqZcWl8B_KbG306lDDXbMpt4ecDxHhuuDsazjNPinKvnHQkOy8l8mzcGa88ltYWa5_X-KoJVpi54FUbiWAceO3U81uyneQFZ3tVGZ_-LVd8To&sig=AOD64_2_eHp-JleSKKf5y89hKoSd86wT-w&q&nis=4&adurl&ved=2ahUKEwjx67rck_SEAxXrMlkFHTp1A4cQ0Qx6BAgGEAE"><button class="r">CYBERSECURITY</button></a></div>
-    <div><a href="https://learnweb3.io/"><button class="r">WEB3</button></a></div>
-</div>
-<hr>
-<footer class="footer">
-<div class="footersubmit">
-<div class="footercol">
-    <h4>academic info</h4>
-    <ul>
-        <li><a href="#">about us</a></li>
-        <li><a href="#">our services</a></li>
-        <li><a href="#">privacy policy</a></li>
-        <li><a href="#">affiliate program</a></li>
-    </ul>
-</div>
-<div class="footercol">
-    <h4>get help</h4>
-    <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">enquiry</a></li>
-        <li><a href="#">account info</a></li>
-        <li><a href="#">progress</a></li>
-        <li><a href="#">account issues</a></li>
-    </ul>
-</div>
-<div class="footercol">
-    <h4>useful links</h4>
-    <ul>
-        <li><a href="#">career oppurtinities</a></li>
-        <li><a href="#">terms & conditions</a></li>
-        <li><a href="#">blog posts</a></li>
-        <li><a href="#">upcoming events</a></li>
-    </ul>
-</div>
-</div>
-    <h4 class="follow">follow us on</h4>
-    <div class="sociallinks">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-twitter"></a>
+
+    <div class="container">
+        <h2 class="gradient-text" style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;"
+            data-aos="fade-up">AVAILABLE COURSES</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;" data-aos="fade-up">Select a
+            technology to start your learning journey.</p>
+
+        <div class="courses-grid">
+            <!-- Web Development -->
+            <a href="https://www.w3schools.com/html/default.asp" class="course-card card-3d" data-aos="fade-up">
+                <i class="fa-brands fa-html5 course-icon"></i>
+                <div class="card-content">
+                    <h3>HTML5</h3>
+                    <p>The structural foundation of all web pages. Learn tags, attributes, and semantic structure.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 12 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/css/default.asp" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="100">
+                <i class="fa-brands fa-css3-alt course-icon"></i>
+                <div class="card-content">
+                    <h3>CSS3</h3>
+                    <p>Style your web pages with modern layout techniques like Flexbox and Grid.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 15 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/js/default.asp" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="200">
+                <i class="fa-brands fa-js course-icon"></i>
+                <div class="card-content">
+                    <h3>JavaScript</h3>
+                    <p>The programming language of the web. Add interactivity and dynamic behavior.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 25 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Advanced</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/react/default.asp" class="course-card card-3d" data-aos="fade-up">
+                <i class="fa-brands fa-react course-icon"></i>
+                <div class="card-content">
+                    <h3>React</h3>
+                    <p>A JavaScript library for building user interfaces. Master components and state.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 20 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Advanced</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <!-- Programming Languages -->
+            <a href="https://www.w3schools.com/python/default.asp" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="100">
+                <i class="fa-brands fa-python course-icon"></i>
+                <div class="card-content">
+                    <h3>Python</h3>
+                    <p>A versatile language for web dev, data science, and automation.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 18 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/java/default.asp" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="200">
+                <i class="fa-brands fa-java course-icon"></i>
+                <div class="card-content">
+                    <h3>Java</h3>
+                    <p>Object-oriented programming language used for enterprise and mobile apps.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 30 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/cpp/default.asp" class="course-card card-3d" data-aos="fade-up">
+                <i class="fa-solid fa-code course-icon"></i>
+                <div class="card-content">
+                    <h3>C++</h3>
+                    <p>High-performance language for system programming and game development.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 22 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Advanced</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/cs/index.php" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="100">
+                <i class="fa-brands fa-microsoft course-icon"></i>
+                <div class="card-content">
+                    <h3>C#</h3>
+                    <p>Modern, object-oriented language for .NET and game development with Unity.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 20 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <!-- Backend & Database -->
+            <a href="https://www.w3schools.com/nodejs/default.asp" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="200">
+                <i class="fa-brands fa-node course-icon"></i>
+                <div class="card-content">
+                    <h3>Node.js</h3>
+                    <p>JavaScript runtime built on Chrome's V8 engine for server-side development.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 15 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Advanced</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/sql/default.asp" class="course-card card-3d" data-aos="fade-up">
+                <i class="fa-solid fa-database course-icon"></i>
+                <div class="card-content">
+                    <h3>SQL</h3>
+                    <p>Standard language for storing, manipulating and retrieving data in databases.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 10 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/php/default.asp" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="100">
+                <i class="fa-brands fa-php course-icon"></i>
+                <div class="card-content">
+                    <h3>PHP</h3>
+                    <p>A popular general-purpose scripting language that is especially suited to web development.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 18 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+
+            <a href="https://www.w3schools.com/c/index.php" class="course-card card-3d" data-aos="fade-up"
+                data-aos-delay="200">
+                <i class="fa-solid fa-c course-icon"></i>
+                <div class="card-content">
+                    <h3>C Programming</h3>
+                    <p>The mother of all languages. Great for understanding system architecture.</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 20 Hours</span>
+                        <span><i class="fa-solid fa-signal"></i> Hard</span>
+                    </div>
+                    <button class="btn-sm">Start Learning</button>
+                </div>
+            </a>
+        </div>
     </div>
-    <p class="copy">Copyright © 2012 - 2024 SKILLUP®. All rights reserved.</p>
-</footer>
+
+    <footer class="footer">
+        <div class="footersubmit">
+            <div class="footercol">
+                <h4>Academic Info</h4>
+                <ul>
+                    <li><a href="./gpt.html">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Account Info</a></li>
+                    <li><a href="#">Progress</a></li>
+                    <li><a href="#">Account Issues</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Career Opportunities</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                </ul>
+            </div>
+            <div class="footercol newsletter-form">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <h4 class="follow" style="text-align: center; margin-top: 2rem; color: var(--primary-color);">Follow Us
+            On</h4>
+        <div class="sociallinks">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <p class="copy">Copyright © 2024 SKILLUP®. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
 </body>
+
+</html>

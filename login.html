@@ -1,188 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillUp - Sign In/Sign Up</title>
+    <title>Login - SKILLUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <style>
-        /* Global styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #222;
-        color: #fff;
-    }
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        flex-direction: column;
-    }
-    .title {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    .cards-container {
-        display: flex;
-    }
-    .card {
-        background-color: #333;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        margin: 0 10px;
-        width: 350px; /* Adjust the width as needed */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 400px; /* Adjust the height as needed */
-    }
-    .button {
-        background-color: #000;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    .button:hover {
-        background-color: #3ec5fa;
-        color: #000000;
-    }
-    input[type="text"],
-    input[type="password"] {
-        width: calc(100% - 22px);
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    .forgot-password {
-        color: #aaa;
-        text-decoration: none;
-        font-size: 14px;
-        margin-top: 10px;
-    }
-    .forgot-password:hover {
-        color: #fff;
-    }
-    .create-account-button {
-        margin-top: 10px;
-    }
-        header{
-    justify-content: space-between;
-    display:flex;
-    text-decoration: none;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color:rgb(58, 209, 229);
-    border-radius: 2px;
-    background:rgba(213, 201, 201, 0.7);
-    backdrop-filter: blur(7px);
-}
-.compney{
-    font-size: 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:#0f0f0f;
-    align-self: center;
-    margin-left: 180px;
-}
-.compneyname{
-    margin-top: 13px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.compneyname a{ 
-    text-decoration: none;
-    list-style: none;
-    padding: 0px 10px;
-    font-size: 18px;
-    color: black;
-    margin-top: 50px;
-}
-.compneyname :hover{
-    color:#FF407D
-}
+        .container {
+            background-color: var(--card-bg);
+            border-radius: 30px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+            width: 768px;
+            max-width: 100%;
+            min-height: 480px;
+            margin: 50px auto;
+        }
 
-.headimage{
-    height: 40px;
-    width: 130px;
-    border: 3px solid rgb(43, 199, 193);
-    border-radius: 10px;
-    margin-left: 5px;
-}
-@media only screen and (max-width: 768px) {
-    header img{
-        width: 110px;
-    }
-    .compneyname{
-        display: inline;
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .cards-container{
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        margin-top: 30px;
-    }
-    .title{
-        margin-top: 280px;
-        margin-bottom: auto;
-    }
-    .compneyname a{
-        padding: 5px;
-    }
-}
+        .container p {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.3px;
+            margin: 20px 0;
+        }
+
+        .container span {
+            font-size: 12px;
+        }
+
+        .container a {
+            color: var(--text-color);
+            font-size: 13px;
+            text-decoration: none;
+            margin: 15px 0 10px;
+        }
+
+        .container button {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 12px;
+            padding: 10px 45px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .container button.hidden {
+            background-color: transparent;
+            border-color: #fff;
+        }
+
+        .container form {
+            background-color: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            height: 100%;
+        }
+
+        .container input {
+            background-color: var(--bg-color);
+            border: none;
+            margin: 8px 0;
+            padding: 10px 15px;
+            font-size: 13px;
+            border-radius: 8px;
+            width: 100%;
+            outline: none;
+            color: var(--text-color);
+        }
+
+        .form-container {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .sign-in {
+            left: 0;
+            width: 50%;
+            z-index: 2;
+        }
+
+        .container.active .sign-in {
+            transform: translateX(100%);
+        }
+
+        .sign-up {
+            left: 0;
+            width: 50%;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .container.active .sign-up {
+            transform: translateX(100%);
+            opacity: 1;
+            z-index: 5;
+            animation: move 0.6s;
+        }
+
+        @keyframes move {
+
+            0%,
+            49.99% {
+                opacity: 0;
+                z-index: 1;
+            }
+
+            50%,
+            100% {
+                opacity: 1;
+                z-index: 5;
+            }
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            border: 1px solid #ccc;
+            border-radius: 20%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 3px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .toggle-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            transition: all 0.6s ease-in-out;
+            border-radius: 150px 0 0 100px;
+            z-index: 1000;
+        }
+
+        .container.active .toggle-container {
+            transform: translateX(-100%);
+            border-radius: 0 150px 100px 0;
+        }
+
+        .toggle {
+            background-color: var(--primary-color);
+            height: 100%;
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            color: #fff;
+            position: relative;
+            left: -100%;
+            height: 100%;
+            width: 200%;
+            transform: translateX(0);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .container.active .toggle {
+            transform: translateX(50%);
+        }
+
+        .toggle-panel {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 30px;
+            text-align: center;
+            top: 0;
+            transform: translateX(0);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .toggle-left {
+            transform: translateX(-200%);
+        }
+
+        .container.active .toggle-left {
+            transform: translateX(0);
+        }
+
+        .toggle-right {
+            right: 0;
+            transform: translateX(0);
+        }
+
+        .container.active .toggle-right {
+            transform: translateX(200%);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                min-height: 600px;
+            }
+
+            .form-container {
+                width: 100%;
+                height: 60%;
+                top: 40%;
+            }
+
+            .sign-in {
+                width: 100%;
+                z-index: 2;
+            }
+
+            .sign-up {
+                width: 100%;
+            }
+
+            .toggle-container {
+                width: 100%;
+                height: 40%;
+                top: 0;
+                left: 0;
+                border-radius: 0 0 50px 50px;
+            }
+
+            .container.active .toggle-container {
+                transform: translateY(0);
+                border-radius: 0 0 50px 50px;
+            }
+
+            .toggle {
+                width: 100%;
+                height: 100%;
+                left: 0;
+                transform: translateY(0);
+            }
+
+            .toggle-panel {
+                width: 100%;
+                height: 100%;
+            }
+
+            .container.active .sign-in {
+                transform: translateY(100%);
+            }
+
+            .container.active .sign-up {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
+
 <body>
-<header>
-<a href="#"><img class="headimage" src="./logo.png"></a>
-    <nav>
-    <div class="compneyname">
-    <a href="./index.html">Home</a>
-    <a href="./gpt.html">About</a>
-    <a href="./courses.html">Courses</a>
-    <a href="./roadmaps.html">Roadmaps</a>
-    <a href="./watch.html">Explore</a>
+    <header>
+        <a href="./index.html" class="logo-link">
+            <div class="logo-container">
+                <i class="fa fa-rocket logo-icon"></i>
+                <span class="logo-text">SKILL<span class="logo-accent">UP</span></span>
+            </div>
+        </a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="companyname">
+                <a href="./index.html">Home</a>
+                <a href="./gpt.html">About</a>
+                <a href="./courses.html">Courses</a>
+                <a href="./roadmaps.html">Roadmaps</a>
+                <a href="./watch.html">Explore</a>
+                <a class="loginbutton" href="./login.html">Login</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container card-3d" id="container">
+        <div class="form-container sign-up">
+            <form id="signup-form">
+                <h1 class="gradient-text">Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name" id="signup-name" required>
+                <input type="email" placeholder="Email" id="signup-email" required>
+                <input type="password" placeholder="Password" id="signup-password" required>
+                <button type="submit" id="signup-btn">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="signin-form">
+                <h1 class="gradient-text">Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email" id="signin-email" required>
+                <input type="password" placeholder="Password" id="signin-password" required>
+                <a href="#">Forget Your Password?</a>
+                <button type="submit" id="signin-btn">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
-</header>
-<div class="container">
-<div class="title">Login or Sign Up</div>
-<div class="cards-container">
-    <!-- Sign In Card -->
-    <div class="card">
-        <h2>Sign In</h2>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <a href="#" class="forgot-password">Forgot Password?</a>
-        <br><br>
-        <button class="button">Submit</button>
-        <br><br>
-        <button class="button">Sign in with Google</button>
-        <br><br>
-        <button class="button">Sign in with GitHub</button>
-    </div>
-    <!-- Sign Up Card -->
-    <div class="card">
-        <h2>Sign Up</h2>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <button class="create-account-button button">Create Account</button>
-        <br><br>
-        <button class="button">Sign up with Google</button>
-        <br><br>
-        <button class="button">Sign up with GitHub</button>
-    </div>
-</div>
-</div>
+
+    <footer class="footer">
+        <div class="footersubmit">
+            <div class="footercol">
+                <h4>Academic Info</h4>
+                <ul>
+                    <li><a href="./gpt.html">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Account Info</a></li>
+                    <li><a href="#">Progress</a></li>
+                    <li><a href="#">Account Issues</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Career Opportunities</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                </ul>
+            </div>
+            <div class="footercol newsletter-form">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <h4 class="follow" style="text-align: center; margin-top: 2rem; color: var(--primary-color);">Follow
+            Us On</h4>
+        <div class="sociallinks">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+        </div>
+        <p class="copy">Copyright © 2024 SKILLUP®. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
 </body>
+
 </html>

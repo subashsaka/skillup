@@ -1,63 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>roadmaps</title>
-<link rel="stylesheet" href="roadmap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmaps - SKILLUP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <header>
-        <a href="#"><img class="headimage" src="./logo.png"></a>
-            <nav>
-            <div class="compneyname">
-            <a href="./index.html">Home</a>
-            <a href="./gpt.html">About</a>
-            <a href="./courses.html">Courses</a>
-            <a href="./roadmaps.html">Roadmaps</a>
-            <a class="loginbutton" href="./login.html">Login</a>
+        <a href="./index.html" class="logo-link">
+            <div class="logo-container">
+                <i class="fa fa-rocket logo-icon"></i>
+                <span class="logo-text">SKILL<span class="logo-accent">UP</span></span>
+            </div>
+        </a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="companyname">
+                <a href="./index.html">Home</a>
+                <a href="./gpt.html">About</a>
+                <a href="./courses.html">Courses</a>
+                <a href="./roadmaps.html" class="active">Roadmaps</a>
+                <a href="./watch.html">Explore</a>
+                <a class="loginbutton" href="./login.html">Login</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fa fa-moon-o"></i></button>
             </div>
         </nav>
-        </header>
-<div class="card">
-    <div class="content">
-        <img class="mainimg" src="./roadimg.jpg">
-    </div>
-    <div class="holy">
-        <p>DON'T KNOW WHERE TO START<BR>NO WORRIES !!!</p>
+    </header>
+
+    <div class="section2">
+        <div class="main" data-aos="fade-right">
+            <img class="mainimg card-3d" src="./images/roadmaps_hero_3d.png" alt="Roadmaps Hero">
+        </div>
+        <div class="text-content" data-aos="fade-left">
+            <h1 class="select">CHOOSE YOUR <span class="gradient-text">CAREER PATH</span></h1>
+            <p class="para">Step-by-step guides to help you master your chosen technology stack.</p>
+        </div>
     </div>
 
-</div>
+    <div class="container" style="padding: 2rem;">
+        <h2 class="gradient-text" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;"
+            data-aos="fade-up">EXPLORE ROADMAPS</h2>
 
-<div class="container">
-    <h2>CHOOSE  YOUR ROADMAP </h2>
-</div>
-<div class="row">
-<div class="sec1">
-<a href="https://roadmap.sh/data-analyst"><button class="hello">Data Analyst</button></a>
-<a href="https://roadmap.sh/frontend"><button class="hello">Frontend Developer</button></a>
-<a href="https://roadmap.sh/backend"><button class="hello">Backend Developer</button></a>
-<button class="hello">python developer</button>
-</div>
-<div class="sec2">
-    <a href="https://roadmap.sh/devops"><button class="hello">DevOps</button></a>
-    <h1>START FROM</h1>
-    <a href="https://roadmap.sh/full-stack"><button class="hello">Full Stack</button> </a>
-</div>
-<div class="sec4">
-    <a href="https://roadmap.sh/mlops"><button class="hello">MLops</button></a>
-    <h1>SCRATCH</h1>
-    <button class="hello">front end developer</button> 
-</div>
-<div class="sec3">
-    <a href="https://roadmap.sh/postgresql-dba"><button class="hello">PostgreSQL</button></a>
-    <a href="https://roadmap.sh/flutter"><button class="hello">Flutter</button> </a>
-    <a href="https://roadmap.sh/cyber-security"><button class="hello">Cyber Security</button>  </a>
-    <a href="https://roadmap.sh/game-developer" ><button class="hello">Game Devloper</button> </a>
-</div>
-</div>
+        <div class="roadmap-grid">
+            <!-- Role Based -->
+            <a href="https://roadmap.sh/frontend" class="roadmap-card card-3d" data-aos="fade-up">
+                <div class="card-content">
+                    <i class="fa fa-desktop"
+                        style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>Frontend Developer</h3>
+                    <p>Master HTML, CSS, JS, and modern frameworks.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/backend" class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-content">
+                    <i class="fa fa-server"
+                        style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Backend Developer</h3>
+                    <p>Learn server-side logic, databases, and APIs.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/full-stack" class="roadmap-card card-3d" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="card-content">
+                    <i class="fa fa-layer-group"
+                        style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h3>Full Stack</h3>
+                    <p>Become a complete developer by mastering both ends.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/devops" class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-content">
+                    <i class="fa fa-cogs" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                    <h3>DevOps</h3>
+                    <p>Bridge the gap between development and operations.</p>
+                </div>
+            </a>
+
+            <!-- Skill Based -->
+            <a href="https://roadmap.sh/python" class="roadmap-card card-3d" data-aos="fade-up">
+                <div class="card-content">
+                    <i class="fa fa-code" style="font-size: 3rem; color: #eab308; margin-bottom: 1rem;"></i>
+                    <h3>Python</h3>
+                    <p>Data science, web dev, automation, and more.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/java" class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-content">
+                    <i class="fa fa-coffee" style="font-size: 3rem; color: #f97316; margin-bottom: 1rem;"></i>
+                    <h3>Java</h3>
+                    <p>Enterprise applications and Android development.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/flutter" class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-content">
+                    <i class="fa fa-mobile" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem;"></i>
+                    <h3>Flutter</h3>
+                    <p>Build native apps for mobile, web, and desktop.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/cyber-security" class="roadmap-card card-3d" data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="card-content">
+                    <i class="fa fa-shield" style="font-size: 3rem; color: #ef4444; margin-bottom: 1rem;"></i>
+                    <h3>Cyber Security</h3>
+                    <p>Protect systems and networks from digital attacks.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/data-analyst" class="roadmap-card card-3d" data-aos="fade-up">
+                <div class="card-content">
+                    <i class="fa fa-bar-chart" style="font-size: 3rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
+                    <h3>Data Analyst</h3>
+                    <p>Interpret data to help make better business decisions.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/postgresql-dba" class="roadmap-card card-3d" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="card-content">
+                    <i class="fa fa-database" style="font-size: 3rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <h3>PostgreSQL</h3>
+                    <p>Advanced open source relational database.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/mlops" class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-content">
+                    <i class="fa fa-brain" style="font-size: 3rem; color: #ec4899; margin-bottom: 1rem;"></i>
+                    <h3>MLOps</h3>
+                    <p>Deploy and maintain machine learning models.</p>
+                </div>
+            </a>
+            <a href="https://roadmap.sh/game-developer" class="roadmap-card card-3d" data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="card-content">
+                    <i class="fa fa-gamepad" style="font-size: 3rem; color: #a855f7; margin-bottom: 1rem;"></i>
+                    <h3>Game Developer</h3>
+                    <p>Create engaging and interactive gaming experiences.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footersubmit">
+            <div class="footercol">
+                <h4>Academic Info</h4>
+                <ul>
+                    <li><a href="./gpt.html">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Account Info</a></li>
+                    <li><a href="#">Progress</a></li>
+                    <li><a href="#">Account Issues</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Career Opportunities</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                </ul>
+            </div>
+            <div class="footercol newsletter-form">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <h4 class="follow" style="text-align: center; margin-top: 2rem; color: var(--primary-color);">Follow Us On</h4>
+        <div class="sociallinks">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <p class="copy">Copyright © 2024 SKILLUP®. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
 </body>
-<footer>
-    <p>&copy; 2024 SKILLUP. All rights reserved.</p>
-</footer>
+
 </html>

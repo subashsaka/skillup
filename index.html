@@ -1,161 +1,231 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SKILLUP</title>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <link rel="STYLESHEET" href="main.css">
-    <script src="roadmap.js"></script>
-    <body>
-        <div class="total">
-        <header>
-        <a href="#"><img class="headimage" src="./logo.png"></a>
-            <nav>
-            <div class="compneyname">
-            <a href="#">Home</a>
-            <a href="./gpt.html">About</a>
-            <a href="./courses.html">Courses</a>
-            <a href="./roadmaps.html">Roadmaps</a>
-            <a class="loginbutton" href="./login.html">Login</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SKILLUP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Page Specific Styles */
+        .marq-container {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+
+        .marqhead {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .pathbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+
+        .pathbox:hover {
+            transform: translateY(-10px);
+        }
+
+        .pathbox img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+
+        .pathname {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .vidimg {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html" class="logo-link">
+            <div class="logo-container">
+                <i class="fa fa-rocket logo-icon"></i>
+                <span class="logo-text">SKILL<span class="logo-accent">UP</span></span>
+            </div>
+        </a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="companyname">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./gpt.html">About</a>
+                <a href="./courses.html">Courses</a>
+                <a href="./roadmaps.html">Roadmaps</a>
+                <a href="./watch.html">Explore</a>
+                <a class="loginbutton" href="./login.html">Login</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fa fa-moon-o"></i></button>
             </div>
         </nav>
-        </header>
-        <h1 class="head" >CHOOSE YOUR CAREER AND START YOUR PROJECT..</h1>
-        <div class="sec1">
-        <div>
-            <img class="mainimg" src="./home3.jpg"data-aos="fade-up-right" data-aos-duration="40000">
-        </div>
-        <div class="rose">
-            <h1 class="discription" data-aos="fade-up-left" data-aos-duration="40000">
-                BUILD YOUR FUTURE <BR>
-                START YOUR <span>JOURNEY..</span>
-            </h1>
-            <a href="./watch.html"><button class="explore" data-aos="fade-up" data-aos-duration="40000">start now</button></a>
-        </div>
-    </div>
-        <div class="sec2">
-    <div class="para"  data-aos="fade-right" data-aos-duration="40000">
-        <p> Want a best source to learn, Confused where to start ?<br>
-        Want to Level up your skills, Don't know what to do ?
-        <br><span>Unsure From Where To Begin ?</span>
-        <br>Don’t worry we got you</p>
-        <button class="explore">Explore all</button>
-    </div>
-    <div>
-        <img src="./desktop.jpg" class="desktopimg" data-aos="fade-left" data-aos-duration="4000">
-    </div>
-        </div>
-        <div class="jocker">
-            <marquee id="marq" class="marq" scrollamount="13">
-                <h1 class="marqhead"> "WITH GREAT SKILLS COMES GREAT RESPONSIBILITY"</h1>
-            </marquee>
-        </div>
-        <div class="sec3">
-        <div class="works" data-aos="fade-up" data-aos-duration="40000">
-        <h1>How <span class="job">SKILLUP</span> works ?</h1>
-        </div>
-        <div class="paths">
-    <div class="pathbox">
-        <div>
-        <img class = "carrer" src="./carrer.svg" data-aos="fade-right" data-aos-duration="40000">
-    </div>
-    <div>
-        <p class="pathname">1 - choose your carrer</p>
-    </div>
-    </div>
-    <div class="pathbox">
-        <div>
-        <img class = "courses" src="./courses.svg" data-aos="fade-left" data-aos-duration="40000">
-        </div>
-        <div>
-            <p class="pathname">2 - choose your skill</p>
-        </div>
-    </div>
-    <div class="pathbox">
-    <div>
-        <img class = "projects" src="./projects.svg" data-aos="fade-right" data-aos-duration="40000">
-    </div>
-    <div>
-        <p class="pathname">3 - complete your course</p>
-    </div>
-</div>
-<div class="pathbox">
-    <div>
-        <img class = "achive"src="./achieve.svg" data-aos="fade-left" data-aos-duration="40000">
-    </div>
-    <div>
-        <p class="pathname">4 - achieve your goal!</p>
-    </div>
-    </div>
-    </div>
-    </div>
-    <hr>
-    <h1 class="comfort">LEARN IN YOUR COMFORT WAY</h1>
-    <div class="sec4">
-        <div class="card">
-            <div class="heylook">
-            <img class="vidimg" src="./videoimage.jpg" >
-            <p data-aos="fade-up" data-aos-duration="40000">Learn Through Videos.</p>
-            <a href="./watch.html"><button class="learn"data-aos="fade-up" data-aos-duration="40000">WATCH</button></a>
-        </div>
-        </div>
+    </header>
 
-        <div class="card">
-            <div class="heylook">
-            <img class="vidimg" src= "https://plus.unsplash.com/premium_photo-1661720027875-4bb0a2c90f30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG9ubGluZSUyMGxlYXJuaW5nfGVufDB8fDB8fHww">
-            <p data-aos="fade-up" data-aos-duration="40000"> Learn Through Websites.</p>
-            <a href="./courses.html"><button class="learn" data-aos="fade-up" data-aos-duration="40000">VISIT</button></a>
+    <!-- Hero Section -->
+    <div class="section2">
+        <div class="main" data-aos="fade-right">
+            <img class="mainimg card-3d" src="./images/hero_professional.png" alt="Hero Image">
+        </div>
+        <div class="text-content" data-aos="fade-left">
+            <h1 class="select">ARCHITECT YOUR <span class="gradient-text">FUTURE</span></h1>
+            <p class="para">Begin your journey to mastery. We provide the roadmap, resources, and guidance you need to
+                succeed in the tech world.</p>
+            <a href="./watch.html"><button class="hello">Get Started</button></a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="section2" style="flex-direction: row-reverse; background-color: var(--card-bg);">
+        <div class="main" data-aos="fade-left">
+            <img class="mainimg card-3d" src="./images/learning_setup.png" alt="Learning Setup">
+        </div>
+        <div class="text-content" data-aos="fade-right">
+            <h1 class="select">PATH TO <span class="gradient-text">EXPERTISE</span></h1>
+            <p class="para">Seeking the best resources to master new skills? Confused about where to begin? We provide
+                the structured guidance you need.</p>
+            <a href="./courses.html"><button class="hello">Explore All</button></a>
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marq-container">
+        <marquee scrollamount="12">
+            <h1 class="marqhead">"EMPOWERING DEVELOPERS WITH WORLD-CLASS SKILLS" &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+                "BUILD YOUR DREAM CAREER TODAY"</h1>
+        </marquee>
+    </div>
+
+    <!-- How It Works -->
+    <div class="container">
+        <h2 class="gradient-text" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;"
+            data-aos="fade-up">HOW SKILLUP WORKS</h2>
+        <div class="roadmap-grid">
+            <div class="pathbox" data-aos="fade-up">
+                <img src="./images/career.svg" alt="Career">
+                <p class="pathname">1. Choose Your Career Path</p>
+            </div>
+            <div class="pathbox" data-aos="fade-up" data-aos-delay="100">
+                <img src="./images/courses.svg" alt="Courses">
+                <p class="pathname">2. Select Your Skills</p>
+            </div>
+            <div class="pathbox" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/achieve.svg" alt="Achieve">
+                <p class="pathname">3. Achieve Your Goals</p>
             </div>
         </div>
     </div>
-    <hr>
-<footer class="footer">
-<div class="footersubmit">
-<div class="footercol">
-    <h4>academic info</h4>
-    <ul>
-        <li><a href="./gpt.html">about us</a></li>
-        <li><a href="#">our services</a></li>
-        <li><a href="#">privacy policy</a></li>
-        <li><a href="#">affiliate program</a></li>
-    </ul>
-</div>
-<div class="footercol">
-    <h4>get help</h4>
-    <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">enquiry</a></li>
-        <li><a href="#">account info</a></li>
-        <li><a href="#">progress</a></li>
-        <li><a href="#">account issues</a></li>
-    </ul>
-</div>
-<div class="footercol">
-    <h4>useful links</h4>
-    <ul>
-        <li><a href="#">career oppurtinities</a></li>
-        <li><a href="#">terms & conditions</a></li>
-        <li><a href="#">blog posts</a></li>
-        <li><a href="#">upcoming events</a></li>
-    </ul>
-</div>
-</div>
-    <h4 class="follow">follow us on</h4>
-    <div class="sociallinks">
-        <div>
+
+    <!-- Why Choose Us -->
+    <div class="container">
+        <h2 class="gradient-text" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; margin-top: 2rem;"
+            data-aos="fade-up">WHY CHOOSE US?</h2>
+        <div class="roadmap-grid">
+            <div class="roadmap-card card-3d" data-aos="fade-up">
+                <img src="./images/video_tutorial.png" class="vidimg" alt="Expert Instructors">
+                <div class="card-content">
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry experts who are passionate about teaching.</p>
+                </div>
+            </div>
+            <div class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="100">
+                <img src="./images/video_learning_pro.png" class="vidimg" alt="Interactive Content">
+                <div class="card-content">
+                    <h3>Interactive Content</h3>
+                    <p>Engage with hands-on projects and quizzes to reinforce your learning.</p>
+                </div>
+            </div>
+            <div class="roadmap-card card-3d" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/videoimage.jpg" class="vidimg" alt="Flexible Learning">
+                <div class="card-content">
+                    <h3>Flexible Learning</h3>
+                    <p>Study at your own pace, anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footersubmit">
+            <div class="footercol">
+                <h4>Academic Info</h4>
+                <ul>
+                    <li><a href="./gpt.html">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Account Info</a></li>
+                    <li><a href="#">Progress</a></li>
+                    <li><a href="#">Account Issues</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Career Opportunities</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                </ul>
+            </div>
+            <div class="footercol newsletter-form">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <h4 class="follow" style="text-align: center; margin-top: 2rem; color: var(--primary-color);">Follow Us On</h4>
+        <div class="sociallinks">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-linkedin"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>
         </div>
-    </div>
-    <p class="copy">Copyright © 2012 - 2024 SKILLUP®. All rights reserved.</p>
+        <p class="copy">Copyright © 2024 SKILLUP®. All rights reserved.</p>
     </footer>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    </body>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>

@@ -1,210 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us - SKILLUP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            background: linear-gradient(135deg, #4b6cb7, #182848);
-            color: #fff;
-            padding: 20px;
+        .about-header {
             text-align: center;
+            padding: 4rem 2rem;
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+            border-radius: 0 0 50px 50px;
         }
 
-        h1 {
-            margin: 0;
+        .about-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .content {
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
             display: flex;
-            justify-content: center;
+            gap: 2rem;
             align-items: center;
-            flex-direction: column;
-            padding: 20px;
         }
 
-        .description {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 25PX;
-            margin-bottom: 20px;
-            text-align: center;
+        .about-card.reverse {
+            flex-direction: row-reverse;
         }
 
-        .images {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 20px;
+        .about-card img {
+            width: 200px;
+            border-radius: 10px;
         }
 
-        .images img {
-            max-width: 45%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .about-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
-        .card {
-            background: linear-gradient(135deg, #f9f9f9, #dcdcdc);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
-        }
+        @media (max-width: 768px) {
 
-        .card h2 {
-            color: #020202;
-        }
-
-        footer {
-            margin-top: 20px;
-            background: linear-gradient(135deg, #182848, #4b6cb7);
-            color: #fff;
-            text-align: center;
-            padding: 1px;
-            bottom: 0;
-            width: 100%;
-        }
-        header{
-    justify-content: space-between;
-    display:flex;
-    text-decoration: none;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color:rgb(58, 209, 229);
-    border-radius: 2px;
-    background:rgba(213, 201, 201, 0.7);
-    backdrop-filter: blur(7px);
-}
-.compney{
-    font-size: 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:#0f0f0f;
-    align-self: center;
-    margin-left: 180px;
-}
-.compneyname{
-    margin-top: 13px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.headimage{
-    width: 150px;
-    height: 50px;
-    border: 3px solid rgb(43, 199, 193);
-    border-radius: 10px;
-    margin-left: 5px;
-}
-.compneyname a{ 
-    text-decoration: none;
-    list-style: none;
-    padding: 0px 10px;
-    font-size: 18px;
-    color: black;
-    margin-top: 50px;
-}
-.compneyname :hover{
-    color:#FF407D
-}
-.loginbutton:hover{
-background-color: rgb(224, 78, 45);
-color: white;
-}
-.loginbutton{
-    border-radius:  6px;
-    height: 23px;
-    width: 80px;
-}
-        img{
-            width: 280px;
-            height: 350px;
-        }
-        .pops{
-            font-size: 25px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(to right, red , blue);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-        }
-        span{
-            padding: 3px;
-            font-weight: bold;
-            color: aqua;
-            background-color: rgb(84, 82, 82);
-            border-radius: 6PX;
-            border:2PX solid aqua;
-        }
-        @media only screen and (max-width: 768px){
-            .images p{
+            .about-card,
+            .about-card.reverse {
+                flex-direction: column;
                 text-align: center;
             }
-            .nokia{
-                height: auto;
+
+            .about-card img {
+                width: 100%;
+                max-width: 300px;
             }
-            .compneyname a{
-        padding: 5px;
-    }
-            header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
         }
     </style>
 </head>
+
 <body>
     <header>
-        <a href="#"><img class="headimage" src="./logo.png"></a>
-            <nav>
-            <div class="compneyname">
-            <a href="./index.html">Home</a>
-            <a href="./gpt.html">About</a>
-            <a href="./courses.html">Courses</a>
-            <a href="./roadmaps.html">Roadmaps</a>
-            <a class="loginbutton" href="./login.html">Login</a>
+        <a href="./index.html" class="logo-link">
+            <div class="logo-container">
+                <i class="fa fa-rocket logo-icon"></i>
+                <span class="logo-text">SKILL<span class="logo-accent">UP</span></span>
+            </div>
+        </a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="companyname">
+                <a href="./index.html">Home</a>
+                <a href="./gpt.html" class="active">About</a>
+                <a href="./courses.html">Courses</a>
+                <a href="./roadmaps.html">Roadmaps</a>
+                <a href="./watch.html">Explore</a>
+                <a class="loginbutton" href="./login.html">Login</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
             </div>
         </nav>
-        </header>
-        <h1>About Us</h1>
-    
-    <main>
-        <section class="content">
-            <div class="description">
-                <p>Welcome to <span>SKILLUP</span><br> We are dedicated to providing the best sources for students to learn any skills or programming languages.</p>
-                <p>Whether you're a beginner or an advanced learner, we strive to offer comprehensive resources to help you on your learning journey.</p>
-            </div>
-            <div class="images">
-                <img class="nokia" src="./subash.jpg" alt="Image 1"><p class="pops">I HOPE THIS WEBSITE HELP YOU GUYS!!!!</p>
-            </div>
-            <div class="card" style="background: linear-gradient(135deg, #f9d423, #e65c00);">
+    </header>
+
+    <div class="about-header">
+        <h1 class="gradient-text">About SKILLUP</h1>
+        <p class="para">Empowering developers worldwide to achieve their dreams.</p>
+    </div>
+
+    <div class="about-content">
+        <div class="about-card card-3d">
+            <img src="./images/learning_setup.png" alt="Our Mission">
+            <div>
                 <h2>Our Mission</h2>
-                <p>Our mission is to empower students with the knowledge and skills they need to succeed in today's fast-paced world.</p>
+                <p>To provide high-quality, accessible education to everyone, everywhere. We believe that knowledge is
+                    power, and we are dedicated to empowering individuals to reach their full potential through
+                    technology.</p>
             </div>
-            <div class="card" style="background: linear-gradient(135deg, #8e2de2, #4a00e0);">
+        </div>
+
+        <div class="about-card card-3d reverse">
+            <img src="./images/video_learning_pro.png" alt="Our Vision">
+            <div>
                 <h2>Our Vision</h2>
-                <p>We envision a future where every student has access to quality educational resources regardless of their background or location.</p>
+                <p>To be the world's leading platform for skill development, fostering a community of lifelong learners
+                    and innovators who shape the future of technology.</p>
             </div>
-            <div class="card" style="background: linear-gradient(135deg, #00c6fb, #005bea);">
-                <h2>Why Choose Us?</h2>
-                <p>With a team of dedicated educators and industry professionals, we curate the best learning materials to ensure that you get the most out of your learning experience.</p>
+        </div>
+
+        <div class="about-card card-3d">
+            <div style="width: 100%; text-align: center;">
+                <h2>Join Our Community</h2>
+                <p>Be part of a growing community of developers. Share knowledge, collaborate on projects, and grow
+                    together.</p>
+                <a href="./login.html"><button class="loginbutton" style="margin-top: 1rem;">Join Now</button></a>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 SKILLUP. All rights reserved.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footersubmit">
+            <div class="footercol">
+                <h4>Academic Info</h4>
+                <ul>
+                    <li><a href="./gpt.html">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Account Info</a></li>
+                    <li><a href="#">Progress</a></li>
+                    <li><a href="#">Account Issues</a></li>
+                </ul>
+            </div>
+            <div class="footercol">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Career Opportunities</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                </ul>
+            </div>
+            <div class="footercol newsletter-form">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <h4 class="follow" style="text-align: center; margin-top: 2rem; color: var(--primary-color);">Follow Us On</h4>
+        <div class="sociallinks">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+        </div>
+        <p class="copy">Copyright © 2024 SKILLUP®. All rights reserved.</p>
     </footer>
+
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
 </body>
+
 </html>
